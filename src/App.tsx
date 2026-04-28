@@ -17,6 +17,7 @@ import { Magnetic } from './components/Magnetic';
 import { TiltCard } from './components/TiltCard';
 import InfoWork from './info_work';
 import { CONTENT } from './constants/content';
+import personaImg from './assets/persona.png';
 
 const App: React.FC = () => {
   const [view, setView] = useState<'home' | 'details'>('home');
@@ -71,40 +72,47 @@ const App: React.FC = () => {
             <Header onNavigate={handleNavigate} onViewChange={setView} />
 
             {/* Hero Section */}
-            <section className="relative h-screen flex items-center justify-center section-padding overflow-hidden">
+            <section className="relative min-h-screen flex items-center justify-center section-padding overflow-hidden">
               <motion.div
                 style={{ y: heroY, opacity: heroOpacity }}
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
-                className="max-w-6xl w-full text-center md:text-left"
+                className="max-w-6xl w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-16 pt-20 lg:pt-0"
               >
-                <motion.div variants={itemVariants} className="inline-block text-xs font-bold tracking-[0.4em] text-teal-500/60 uppercase mb-8">
-                  {hero.tagline}
-                </motion.div>
-
-                <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl md:text-7xl mb-6 text-gradient leading-[1.1] tracking-tight">
-                  {hero.title.main} <br />
-                  <span className="text-accent-gradient italic">{hero.title.highlight}</span>
-                </motion.h1>
-
-                <div className="flex flex-col md:flex-row items-end gap-12">
-                  <motion.p variants={itemVariants} className="text-lg text-zinc-500 max-w-xl leading-relaxed font-medium">
-                    {hero.description.main}
-                    <span className="text-zinc-300">{hero.description.highlight1}</span>
-                    {hero.description.connector}
-                    <span className="text-zinc-300">{hero.description.highlight2}</span>
-                    {hero.description.suffix}
-                  </motion.p>
-
-                  <motion.div variants={itemVariants} className="flex gap-4">
-                    <Magnetic>
-                      <button onClick={() => setView('details')} className="btn-premium group flex items-center gap-4">
-                        {hero.button} <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                      </button>
-                    </Magnetic>
+                <div className="text-center lg:text-left flex-1 flex flex-col items-center lg:items-start">
+                  <motion.div variants={itemVariants} className="inline-block text-xs font-bold tracking-[0.4em] text-teal-500/60 uppercase mb-8">
+                    {hero.tagline}
                   </motion.div>
+
+                  <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 text-gradient leading-[1.1] tracking-tight">
+                    {hero.title.main} <br />
+                    <span className="text-accent-gradient italic">{hero.title.highlight}</span>
+                  </motion.h1>
+
+                  <div className="flex flex-col md:flex-row items-center lg:items-end gap-8 md:gap-12 w-full justify-center lg:justify-start">
+                    <motion.p variants={itemVariants} className="text-lg text-zinc-500 max-w-xl leading-relaxed font-medium text-center lg:text-left">
+                      {hero.description.main}
+                      <span className="text-zinc-300">{hero.description.highlight1}</span>
+                      {hero.description.connector}
+                      <span className="text-zinc-300">{hero.description.highlight2}</span>
+                      {hero.description.suffix}
+                    </motion.p>
+
+                    <motion.div variants={itemVariants} className="flex gap-4">
+                      <Magnetic>
+                        <button onClick={() => setView('details')} className="btn-premium group flex items-center gap-4 whitespace-nowrap">
+                          {hero.button} <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                        </button>
+                      </Magnetic>
+                    </motion.div>
+                  </div>
                 </div>
+
+                <motion.div variants={itemVariants} className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 shrink-0 rounded-[2rem] lg:rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl glass group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 via-transparent to-indigo-500/20 mix-blend-overlay z-10 opacity-60 group-hover:opacity-100 transition-opacity duration-700" />
+                  <img src={personaImg} alt="Profile" className="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-700" />
+                </motion.div>
               </motion.div>
               <div className="absolute -bottom-10 -right-10 text-[12vw] font-black text-white/[0.02] select-none pointer-events-none tracking-tighter">{hero.backgroundText}</div>
             </section>
@@ -187,7 +195,7 @@ const App: React.FC = () => {
             {/* Stack Section - Bento Design Refined */}
             <section id="stack" className="section-padding bg-[#050505] relative overflow-hidden">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-teal-500/20 to-transparent" />
-              
+
               <div className="max-w-6xl mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
                   <motion.div
@@ -198,7 +206,7 @@ const App: React.FC = () => {
                       Technical <br /><span className="text-accent-gradient italic font-light">Ecosystem</span>
                     </h2>
                   </motion.div>
-                  <motion.p 
+                  <motion.p
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     className="text-zinc-500 max-w-xs text-sm uppercase tracking-widest leading-relaxed font-bold"
@@ -210,7 +218,7 @@ const App: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                   {/* Category 1: Languages (Col span 2) */}
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     className="md:col-span-2 p-10 glass rounded-[3rem] border border-white/5 relative overflow-hidden group"
@@ -220,10 +228,10 @@ const App: React.FC = () => {
                     </div>
                     <div className="relative z-10">
                       <div className="flex items-center gap-3 mb-8">
-                         <div className="w-8 h-8 rounded-lg bg-teal-500/10 flex items-center justify-center text-teal-500">
-                            <Code2 size={18} />
-                         </div>
-                         <h3 className="text-xl font-bold uppercase tracking-tight">{stack.categories[0].name}</h3>
+                        <div className="w-8 h-8 rounded-lg bg-teal-500/10 flex items-center justify-center text-teal-500">
+                          <Code2 size={18} />
+                        </div>
+                        <h3 className="text-xl font-bold uppercase tracking-tight">{stack.categories[0].name}</h3>
                       </div>
                       <div className="flex flex-wrap gap-3">
                         {stack.categories[0].skills.map(skill => (
@@ -236,21 +244,21 @@ const App: React.FC = () => {
                   </motion.div>
 
                   {/* Category 2: Frameworks (Col span 2) */}
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
                     className="md:col-span-2 p-10 glass rounded-[3rem] border border-white/5 relative overflow-hidden group"
                   >
-                     <div className="absolute -left-4 -top-4 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity duration-700">
+                    <div className="absolute -left-4 -top-4 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity duration-700">
                       <Zap size={200} />
                     </div>
                     <div className="relative z-10">
                       <div className="flex items-center gap-3 mb-8">
-                         <div className="w-8 h-8 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400">
-                            <Zap size={18} />
-                         </div>
-                         <h3 className="text-xl font-bold uppercase tracking-tight">{stack.categories[1].name}</h3>
+                        <div className="w-8 h-8 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400">
+                          <Zap size={18} />
+                        </div>
+                        <h3 className="text-xl font-bold uppercase tracking-tight">{stack.categories[1].name}</h3>
                       </div>
                       <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                         {stack.categories[1].skills.map(skill => (
@@ -263,7 +271,7 @@ const App: React.FC = () => {
                   </motion.div>
 
                   {/* Category 3: Cloud (Col span 2) */}
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
@@ -274,7 +282,7 @@ const App: React.FC = () => {
                       <div className="flex items-center justify-between mb-8">
                         <div className="flex items-center gap-3">
                           <div className="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400">
-                              <Cloud size={18} />
+                            <Cloud size={18} />
                           </div>
                           <h3 className="text-xl font-bold uppercase tracking-tight">{stack.categories[2].name}</h3>
                         </div>
@@ -292,7 +300,7 @@ const App: React.FC = () => {
                   </motion.div>
 
                   {/* Category 4: Automation (Col span 2) */}
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
@@ -301,17 +309,17 @@ const App: React.FC = () => {
                     <div className="absolute inset-0 grid-pattern opacity-10" />
                     <div className="relative z-10">
                       <div className="flex items-center gap-3 mb-8">
-                         <div className="w-8 h-8 rounded-lg bg-teal-500/10 flex items-center justify-center text-teal-400">
-                            <Bot size={18} />
-                         </div>
-                         <h3 className="text-xl font-bold uppercase tracking-tight">{stack.categories[3].name}</h3>
+                        <div className="w-8 h-8 rounded-lg bg-teal-500/10 flex items-center justify-center text-teal-400">
+                          <Bot size={18} />
+                        </div>
+                        <h3 className="text-xl font-bold uppercase tracking-tight">{stack.categories[3].name}</h3>
                       </div>
                       <div className="grid grid-cols-2 gap-4">
                         {stack.categories[3].skills.map(skill => (
                           <div key={skill} className="p-6 rounded-3xl glass border border-white/5 text-center group-hover:border-teal-500/30 transition-all duration-500">
-                             <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500 group-hover:text-teal-400 transition-colors">
-                                {skill}
-                             </div>
+                            <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500 group-hover:text-teal-400 transition-colors">
+                              {skill}
+                            </div>
                           </div>
                         ))}
                       </div>
