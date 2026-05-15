@@ -10,16 +10,16 @@ export const CONTENT = {
     projects: "Proyectos"
   },
   hero: {
-    tagline: "[ Full Stack Systems 2024 ]",
+    tagline: "[ Full Stack & Automation 2026 ]",
     title: {
       main: "DEVELOPING",
       highlight: "EXPERIENCES"
     },
     description: {
-      main: "Desarrollador de Software especializado en crear soluciones robustas. Con amplia experiencia en ",
-      highlight1: "Cloud",
-      connector: ", arquitecturas escalables y ",
-      highlight2: "automatización estratégica",
+      main: "Desarrollador de Software especializado en crear soluciones robustas, con sólida experiencia en desarrollo ",
+      highlight1: "Full Stack",
+      connector: ", optimización de infraestructura e ",
+      highlight2: "automatización avanzada",
       suffix: "."
     },
     button: "VER PROYECTOS",
@@ -27,9 +27,9 @@ export const CONTENT = {
   },
   marquee: [
     "Full Stack Development",
-    "Cloud Architecture",
     "Process Automation",
-    "System Resilience"
+    "RPA & Python Bots",
+    "Internal Infrastructure"
   ],
   about: {
     title: {
@@ -37,17 +37,17 @@ export const CONTENT = {
       highlight: "al Código"
     },
     paragraphs: [
-      "Mi trayectoria comenzó en la base operativa. Inicié mi carrera en Zelenza como Técnico de Redes (Nivel 1) tras cursar mi grado medio en SMR, enfocado en la resolución de incumbencias de infraestructura. En paralelo a mis responsabilidades laborales, completé el Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM).",
-      "Mi dedicación constante me abrió nuevas puertas: fui seleccionado para realizar mis prácticas de desarrollo en la sede central de Méndez Álvaro, compaginando este nuevo rol por las mañanas con mis labores de técnico de redes por las tardes.",
-      "La proactividad y el valor aportado al equipo dieron sus frutos. Al finalizar este periodo, fui promovido oficialmente al puesto de Desarrollador, rol desde el cual continúo aplicando una visión integral de sistemas para construir software que perdure."
+      "Mi trayectoria comenzó en la base operativa. Inicié mi carrera en Zelenza como Técnico de Redes (Nivel 1) tras cursar mi grado medio en SMR, enfocándome en la resolución de incidencias de infraestructura. Con el objetivo de saltar al desarrollo de software, cursé y completé el Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM).",
+      "Mi proactividad me abrió las primeras puertas en el sector: fui seleccionado para realizar mis prácticas de desarrollo de DAM en la sede central de Méndez Álvaro, compaginando este nuevo rol por las mañanas con mis labores de técnico de redes por las tardes.",
+      "El valor aportado al equipo dio sus frutos. Al finalizar las prácticas, fui contratado oficialmente como Desarrollador de Software, rol desde el cual aplico una visión integral que une mi base de sistemas y redes con la construcción de aplicaciones eficientes y automatizaciones a medida."
     ],
     stats: [
-      { value: "IT & Dev", label: "Visión Integral" },
+      { value: "Sistemas & Dev", label: "Visión Integral" },
       { value: "+04", label: "Años de experiencia" }
     ],
     card: {
       badge: "Evolución Actual",
-      role: "SR. DEVELOPER",
+      role: "SOFTWARE DEVELOPER",
       company: "@ ZELENZA"
     }
   },
@@ -58,9 +58,9 @@ export const CONTENT = {
     },
     button: "EXPLORAR DETALLES",
     items: [
-      { title: "Full Stack Development", desc: "Interfaces dinámicas y servicios resilientes." },
-      { title: "Cloud Architecture", desc: "Despliegue y escalabilidad en la nube." },
-      { title: "Automation Engine", desc: "Optimización técnica y RPA estratégico." }
+      { title: "Full Stack Development", desc: "Interfaces dinámicas, API REST y servicios eficientes." },
+      { title: "Internal Infrastructure", desc: "Desarrollo rápido de aplicaciones internas y gestión de datos." },
+      { title: "Automation Engine", desc: "Optimización de procesos técnicos y desarrollo de bots a medida." }
     ]
   },
   stack: {
@@ -69,19 +69,19 @@ export const CONTENT = {
     categories: [
       {
         name: "Languages & Core",
-        skills: ['TypeScript', 'JavaScript', 'Java', 'Python', 'SQL']
+        skills: ['TypeScript', 'JavaScript', 'Java', 'Python', 'SQL', 'PHP']
       },
       {
         name: "Frameworks & UI",
-        skills: ['React', 'Next.js', 'Node.js', 'Tailwind CSS', 'Framer Motion']
+        skills: ['React', 'Next.js', 'Node.js', 'Vue.js 3', 'Tailwind CSS']
       },
       {
         name: "Cloud & Systems",
-        skills: ['Firebase', 'AWS', 'Docker', 'Google Cloud']
+        skills: ['Firebase', 'Docker', 'AppSmith', 'Git']
       },
       {
         name: "Automation & RPA",
-        skills: ['RPA', 'Power Automate', 'Automate Enterprise', 'Python']
+        skills: ['Python Automation', 'Power Automate', 'Automate Enterprise', 'Web Scraping']
       }
     ]
   },
@@ -89,77 +89,51 @@ export const CONTENT = {
     logo: "BRAYAN",
     logoSuffix: "_",
     links: [
-      { label: "LinkedIn", url: "#" },
-      { label: "GitHub", url: "#" }
+      { label: "LinkedIn", url: "https://www.linkedin.com/in/bryam-amaya-3ba7941b8" },
+      { label: "GitHub", url: "https://github.com/BryamDaniel" }
     ],
-    copy: "© 2024 — Building Digital Resilience"
+    copy: "© 2026 — Building Digital Resilience"
   },
   infoWork: {
     backButton: "Volver al Inicio",
     hero: {
-      title: "Ingeniería &",
+      title: "Desarrollo &",
       highlight: "Eficiencia Operativa",
-      description: "Desde liderar la evolución técnica de herramientas internas para grandes clientes, hasta desarrollar automatizaciones de alta precisión. Mi enfoque es construir ecosistemas robustos y eficientes."
+      description: "Desde la evolución técnica de herramientas internas para grandes clientes de telecomunicaciones y sector público, hasta el diseño de automatizaciones de alta precisión."
     },
     experience: [
       {
-        id: "infraestructura-interna",
-        type: "Server",
-        title: "Infraestructura",
-        highlight: "Interna",
-        location: "Sede Central, Méndez Álvaro",
-        color: "purple",
+        id: "rpa-enterprise",
+        type: "Bot",
+        title: "RPA",
+        highlight: "Enterprise",
+        location: "Robotic Process Automation",
+        color: "teal",
         description: [
-          "Tras cuatro años de experiencia como desarrollador y una gestión exitosa en la sede de Gran Vía —donde lideré la migración tecnológica completa y consolidé los sistemas del cliente— decidí buscar nuevos desafíos técnicos que me permitieran seguir escalando mi impacto.",
-          "En reconocimiento a mi trayectoria, fui asignado a la Sede Central de Méndez Álvaro para integrarme en el equipo de Infraestructura Interna. Allí me especialicé en el desarrollo de herramientas de alta complejidad bajo la plataforma AppSmith, gestionando proyectos críticos para grandes cuentas."
+          "Evolución de Tecnologías RPA",
+          "Transición y adaptación de herramientas de automatización según las necesidades operativas de la organización:"
         ],
-        projects: [
-          {
-            title: "1. Arquitectura de Datos (MásMóvil)",
-            desc: "Desarrollo de interfaces de gestión técnica avanzada integradas directamente en la infraestructura operativa de MásMóvil.",
-            details: [
-              { label: "Gestión de APIs y Seguridad:", text: "Implementación de flujos de autenticación robustos mediante la obtención de Tokens y el consumo eficiente de múltiples endpoints." },
-              { label: "Lógica de Negocio:", text: "Programación de lógica personalizada en JavaScript para la manipulación y visualización de datos operativos complejos." }
-            ],
-            tech: ['AppSmith', 'APIs REST', 'JavaScript', 'OAuth/Tokens']
-          },
-          {
-            title: "2. Soluciones Estratégicas (AENA & Madrid Digital)",
-            desc: "Lideré la creación de herramientas destinadas a la gestión de servicios públicos esenciales integrados en la operativa de Telefónica.",
-            details: [
-              { label: "Madrid Digital:", text: "Desarrollo de interfaces de gestión de incidencias y sistemas de plantillas automatizadas, optimizando los flujos de respuesta técnica." },
-              { label: "AENA:", text: "Creación de dashboards operativos para el monitoreo y control de infraestructuras críticas en tiempo real." }
-            ],
-            tech: ['AppSmith', 'Data Dashboards', 'JS Automations', 'Incident Mgmt']
-          }
+        items: [
+          { title: "Automate Enterprise", desc: "Origen de la automatización de tareas técnicas, gestionando flujos de trabajo iniciales y procesos de validación de datos." },
+          { title: "Power Automate", desc: "Migración de soluciones hacia el ecosistema de Microsoft, buscando una mayor integración con servicios cloud corporativos y un mantenimiento más ágil." }
         ]
       },
       {
-        id: "full-stack",
-        type: "Code2",
-        title: "Desarrollo Full Stack",
-        highlight: "Telefónica",
-        location: "Sede Gran Vía, Madrid",
-        color: "blue",
+        id: "python-automation",
+        type: "DatabaseZap",
+        title: "Python",
+        highlight: "Automation",
+        location: "Data & Processing",
+        color: "indigo",
         description: [
-          "Durante mi 2º año como desarrollador, me ofrecieron el desafío de trabajar con Telefónica (Movistar) en la sede de Gran Vía. Al ser el único perfil de desarrollo asignado in-house en esa sede, me autogestioné y lideré la evolución tecnológica de sus herramientas internas, asumiendo la responsabilidad total del ciclo de vida de las aplicaciones y el contacto directo con el cliente."
+          "Automatización Avanzada con Python",
+          "Desarrollo de scripts y bots a medida para superar las limitaciones de las herramientas comerciales estándar en tareas críticas:"
         ],
-        projects: [
-          {
-            title: "Fase 1: Infraestructura Legacy",
-            desc: "Gestión y mantenimiento de sistemas críticos, garantizando estabilidad en entornos de producción tradicionales (OVH, VPS Hostinger) y resolución de incidencias en tiempo real de cara al cliente.",
-            tech: ['PHP', 'SQL', 'HTML5/CSS3/JS', 'WordPress']
-          },
-          {
-            title: "Fase 2: Modernización del Stack",
-            desc: "Por iniciativa propia, propuse y ejecuté el cambio hacia arquitecturas modernas y escalables, coordinando con el departamento de Ciberseguridad la viabilidad de las nuevas tecnologías.",
-            tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Node.js']
-          },
-          {
-            title: "Fase 3: Migración Cloud (Firebase)",
-            desc: "El hito principal de mi gestión: migración completa del ecosistema a Cloud. Lideré el paso de SQL a NoSQL, implementé MFA, reCAPTCHA, optimicé los costes de transferencia de datos y configuré infraestructura DevOps (Hosting Sites, SMTP).",
-            tech: ['Firebase', 'Firestore', 'Auth MFA', 'Cloud Storage']
-          }
+        items: [
+          { title: "Automatización Híbrida (GUI & API)", desc: "Implementación de scripts que combinan la simulación de acciones en interfaz (para sistemas sin API) con peticiones HTTP directas al servidor para optimizar tiempos." },
+          { title: "Gestión de Casos Complejos", desc: "Resolución de flujos con autenticación 2FA, integrando lógica para interactuar de forma segura en procesos automatizados." },
+          { title: "Ciclo de Datos", desc: "Automatización integral de la información: desde la extracción de datos mediante scraping hasta su almacenamiento en bases de datos y actualización en tiempo real." },
+          { title: "Operativa Masiva", desc: "Validación, modificación y carga masiva de registros de clientes, garantizando la integridad de los datos." }
         ]
       },
       {
@@ -171,51 +145,92 @@ export const CONTENT = {
         color: "teal",
         problem: {
           title: "El Problema",
-          text: "El equipo técnico realizaba procesos manuales de gran volumen: navegación repetitiva por sitios externos, recolección manual de datos y ejecución individual de pruebas. Este flujo era propenso a errores humanos y generaba cuellos de botella en los tiempos de entrega."
+          text: "El equipo operativo realizaba tareas manuales repetitivas de gran volumen: navegación por portales externos, recolección de datos uno a uno y ejecución manual de pruebas individuales, lo que generaba lentitud y riesgo de errores."
         },
         solution: {
           title: "La Solución",
-          text: "Desarrollé una extensión de Chrome a medida diseñada para actuar como un \"operador automático\". La herramienta interviene directamente en el frontal de las aplicaciones web para agilizar la operativa técnica mediante tres ejes principales:",
+          text: "Diseñé y desarrollé una extensión de Chrome a medida que actúa como asistente automático en el navegador, interviniendo directamente en el frontend para agilizar las tareas mediante tres ejes:",
           items: [
-            { title: "Inyección y Modificación del DOM", desc: "Alteración de la interfaz original de aplicaciones externas para insertar controles personalizados y mejorar la velocidad de navegación del técnico." },
-            { title: "Automatización de Requests", desc: "Ejecución asíncrona de peticiones para la extracción masiva de información de diversas fuentes, eliminando la necesidad de consultas manuales." },
-            { title: "Engine de Pruebas Automatizadas", desc: "Implementación de un flujo lógico que ejecuta tests técnicos en sitios web de terceros de forma autónoma, validando resultados en segundos." }
+            { title: "Inyección y Modificación del DOM", desc: "Alteración de la interfaz de aplicaciones externas para insertar botones y controles personalizados que agilizan el trabajo del técnico." },
+            { title: "Automatización de Requests", desc: "Ejecución asíncrona de peticiones para la extracción masiva de información, reduciendo consultas manuales." },
+            { title: "Motor de Pruebas Autónomo", desc: "Flujo lógico que ejecuta tests técnicos en sitios web de terceros, validando resultados de forma inmediata." }
           ]
         }
       },
       {
-        id: "python-automation",
-        type: "DatabaseZap",
-        title: "Python",
-        highlight: "Automation",
-        location: "Data & Processing",
-        color: "indigo",
+        id: "full-stack",
+        type: "Code2",
+        title: "Desarrollo Full Stack",
+        highlight: "Telefónica",
+        location: "Sede Gran Vía, Madrid",
+        color: "blue",
         description: [
-          "Automatización Avanzada con Python",
-          "Cuando las soluciones estándar alcanzaban su límite, desarrollé bots de alta precisión para tareas críticas:"
+          "Durante mi trayectoria como desarrollador, asumí el reto de trabajar in-house en la sede de Telefónica (Movistar) en Gran Vía. Siendo el perfil técnico de desarrollo asignado en dicha localización, me encargué de la autogestión y evolución de sus herramientas internas, cubriendo todo el ciclo de vida de las aplicaciones y manteniendo comunicación directa con el cliente."
         ],
-        items: [
-          { title: "Automatización Híbrida (GUI & API)", desc: "Implementación de robots que combinan la ejecución mediante clics en pantalla (para sistemas sin API) con peticiones directas a servidor, optimizando la velocidad siempre que el entorno lo permitía." },
-          { title: "Gestión de Casos Complejos", desc: "Resolución de flujos con autenticación 2FA, integrando lógica programática para superar barreras de seguridad en procesos automatizados." },
-          { title: "Gestión de Datos", desc: "Automatización del ciclo completo de la información: desde la recolección (scraping/extracción) hasta el almacenamiento en bases de datos y actualización de estados de trabajo en tiempo real." },
-          { title: "Operativa Técnica", desc: "Automatización de carga de datos de clientes y validación/modificación masiva de registros, garantizando la integridad de la información." }
+        projects: [
+          {
+            title: "Fase 1: Mantenimiento Legacy",
+            desc: "Gestión y soporte de sistemas internos en producción en entornos tradicionales (OVH, Hostinger), garantizando la estabilidad y resolución de incidencias en tiempo real.",
+            tech: ['PHP', 'SQL', 'HTML5/CSS3/JS']
+          },
+          {
+            title: "Fase 2: Modernización del Stack",
+            desc: "Propuesta e implementación de un cambio tecnológico hacia un desarrollo moderno basado en componentes, coordinando con Ciberseguridad los requisitos para la viabilidad del nuevo entorno.",
+            tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Node.js']
+          },
+          {
+            title: "Fase 3: Migración e Integración con Firebase",
+            desc: "Migración completa del ecosistema local a servicios Cloud, realizando la transición de bases de datos relacionales a NoSQL, implementando autenticación robusta (MFA, reCAPTCHA) y configurando el despliegue.",
+            tech: ['Firebase', 'Firestore', 'Auth MFA', 'Cloud Storage']
+          }
         ]
       },
       {
-        id: "rpa-enterprise",
-        type: "Bot",
-        title: "RPA",
-        highlight: "Enterprise",
-        location: "Robotic Process Automation",
-        color: "teal",
+        id: "infraestructura-interna",
+        type: "Server",
+        title: "Infraestructura",
+        highlight: "Interna",
+        location: "Sede Central, Méndez Álvaro",
+        color: "purple",
         description: [
-          "Evolución de Tecnologías RPA",
-          "He liderado la transición tecnológica hacia la eficiencia operativa, adaptando el stack de herramientas según las necesidades de la organización:"
+          "Tras completar con éxito los objetivos y la migración en la sede de Gran Vía, me incorporé de lleno al equipo de Infraestructura Interna en la Sede Central. En esta etapa me especialicé en el desarrollo rápido de aplicaciones de alta complejidad mediante AppSmith, centralizando y automatizando flujos críticos para grandes cuentas."
         ],
-        items: [
-          { title: "Automate Enterprise", desc: "Origen de la automatización de tareas técnicas, gestionando flujos de trabajo iniciales y procesos de validación de datos." },
-          { title: "Power Automate", desc: "Migración y despliegue de soluciones hacia el ecosistema de Microsoft, buscando una mayor integración con servicios en la nube, escalabilidad y una arquitectura de automatización más ligera y mantenible." }
+        projects: [
+          {
+            title: "1. Integración de Datos (MásMóvil)",
+            desc: "Desarrollo de paneles y herramientas de gestión técnica integradas con la infraestructura operativa del cliente.",
+            details: [
+              { label: "Consumo de APIs y Seguridad:", text: "Implementación de flujos de autenticación mediante tokens y consumo optimizado de múltiples endpoints corporativos." },
+              { label: "Lógica Frontend:", text: "Modelado de datos y filtros avanzados utilizando JavaScript para procesar volúmenes complejos de información operativa." }
+            ],
+            tech: ['AppSmith', 'APIs REST', 'JavaScript', 'OAuth']
+          },
+          {
+            title: "2. Herramientas Operativas (AENA & Madrid Digital)",
+            desc: "Creación de soluciones internas integradas en la operativa de soporte y gestión para cuentas del sector público.",
+            details: [
+              { label: "Madrid Digital:", text: "Desarrollo de interfaces de gestión de incidencias y generadores de plantillas automáticas para unificar y acelerar las respuestas de soporte." },
+              { label: "AENA:", text: "Estructuración de cuadros de mando (dashboards) visuales para la monitorización de datos e infraestructuras operativas." }
+            ],
+            tech: ['AppSmith', 'Dashboards', 'JavaScript', 'Incident Management']
+          }
         ]
+      }
+    ]
+  },
+  personalProjects: {
+    title: {
+      main: "Proyectos",
+      highlight: "Personales"
+    },
+    items: [
+      {
+        id: "dragonball-api",
+        title: "DragonBall API Ecosystem",
+        description: "Aplicación web completa sobre el universo de Dragon Ball, integrando backend y frontend en un entorno contenedorizado.",
+        link: "https://github.com/BryamDaniel/APP-DragonBall-API",
+        tech: ['Python', 'FastAPI', 'Vue.js 3', 'Tailwind CSS', 'Docker Compose'],
+        icon: 'Code2'
       }
     ]
   }

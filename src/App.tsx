@@ -7,7 +7,8 @@ import {
   ShieldCheck,
   ArrowRight,
   Bot,
-  Terminal
+  Terminal,
+  ExternalLink
 } from 'lucide-react';
 
 // Components
@@ -29,7 +30,7 @@ const App: React.FC = () => {
     window.scrollTo(0, 0);
   }, [view]);
 
-  const { hero, marquee, about, experience, stack } = CONTENT;
+  const { hero, marquee, about, experience, stack, personalProjects } = CONTENT;
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -109,12 +110,24 @@ const App: React.FC = () => {
                   </div>
                 </div>
 
-                <motion.div variants={itemVariants} className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 shrink-0 rounded-[2rem] lg:rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl glass group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 via-transparent to-indigo-500/20 mix-blend-overlay z-10 opacity-60 group-hover:opacity-100 transition-opacity duration-700" />
-                  <img src={personaImg} alt="Profile" className="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-700" />
+                <motion.div variants={itemVariants}>
+                  <motion.div
+                    animate={{ y: [0, -15, 0] }}
+                    transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut' }}
+                    className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 shrink-0 rounded-[2rem] lg:rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl glass group"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 via-transparent to-indigo-500/20 mix-blend-overlay z-10 opacity-60 group-hover:opacity-100 transition-opacity duration-700" />
+                    <img src={personaImg} alt="Profile" className="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-700" />
+                  </motion.div>
                 </motion.div>
               </motion.div>
-              <div className="absolute -bottom-10 -right-10 text-[12vw] font-black text-white/[0.02] select-none pointer-events-none tracking-tighter">{hero.backgroundText}</div>
+              <motion.div
+                animate={{ x: [0, 20, 0] }}
+                transition={{ repeat: Infinity, duration: 10, ease: 'easeInOut' }}
+                className="absolute -bottom-10 -right-10 text-[12vw] font-black text-white/[0.02] select-none pointer-events-none tracking-tighter"
+              >
+                {hero.backgroundText}
+              </motion.div>
             </section>
 
             {/* Scrolling Marquee */}
@@ -192,6 +205,54 @@ const App: React.FC = () => {
               </div>
             </section>
 
+            {/* Personal Projects Section */}
+            <section id="proyectos-personales" className="section-padding bg-[#050505]">
+              <div className="max-w-6xl mx-auto">
+                <div className="mb-16 md:mb-24 flex flex-col items-center text-center">
+                  <h2 className="text-3xl sm:text-4xl tracking-tight uppercase mb-4">
+                    {personalProjects?.title?.main || "Proyectos"} <br />
+                    <span className="text-accent-gradient italic">{personalProjects?.title?.highlight || "Personales"}</span>
+                  </h2>
+                </div>
+                <div className="grid md:grid-cols-2 gap-8">
+                  {personalProjects?.items?.map((project, i) => (
+                    <motion.a
+                      key={project.id}
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.1 }}
+                      className="group block p-8 md:p-10 rounded-[2.5rem] glass border border-white/5 hover:border-teal-500/30 transition-all duration-500 relative overflow-hidden"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="relative z-10">
+                        <div className="flex justify-between items-start mb-8">
+                          <div className="w-14 h-14 rounded-2xl bg-teal-500/10 flex items-center justify-center text-teal-400 group-hover:scale-110 transition-transform duration-500">
+                            <Code2 size={24} />
+                          </div>
+                          <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-zinc-400 group-hover:text-white group-hover:bg-white/10 transition-colors">
+                            <ExternalLink size={20} />
+                          </div>
+                        </div>
+                        <h3 className="text-2xl font-bold mb-4 uppercase tracking-tight group-hover:text-teal-400 transition-colors">{project.title}</h3>
+                        <p className="text-zinc-400 text-sm leading-relaxed mb-8">{project.description}</p>
+                        <div className="flex flex-wrap gap-2">
+                          {project.tech.map((tech) => (
+                            <span key={tech} className="px-3 py-1.5 rounded-xl bg-white/[0.03] border border-white/5 text-[10px] font-bold uppercase tracking-widest text-zinc-500 group-hover:text-zinc-300 transition-colors">
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </motion.a>
+                  ))}
+                </div>
+              </div>
+            </section>
+
             {/* Stack Section - Bento Design Refined */}
             <section id="stack" className="section-padding bg-[#050505] relative overflow-hidden">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-teal-500/20 to-transparent" />
@@ -223,9 +284,13 @@ const App: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     className="md:col-span-2 p-10 glass rounded-[3rem] border border-white/5 relative overflow-hidden group"
                   >
-                    <div className="absolute -right-4 -bottom-4 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity duration-700">
+                    <motion.div
+                      animate={{ rotate: [0, 5, -5, 0] }}
+                      transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
+                      className="absolute -right-4 -bottom-4 opacity-[0.03] group-hover:opacity-[0.07] transition-all duration-700"
+                    >
                       <Terminal size={200} />
-                    </div>
+                    </motion.div>
                     <div className="relative z-10">
                       <div className="flex items-center gap-3 mb-8">
                         <div className="w-8 h-8 rounded-lg bg-teal-500/10 flex items-center justify-center text-teal-500">
@@ -250,9 +315,13 @@ const App: React.FC = () => {
                     transition={{ delay: 0.1 }}
                     className="md:col-span-2 p-10 glass rounded-[3rem] border border-white/5 relative overflow-hidden group"
                   >
-                    <div className="absolute -left-4 -top-4 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity duration-700">
+                    <motion.div
+                      animate={{ rotate: [0, -5, 5, 0] }}
+                      transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
+                      className="absolute -left-4 -top-4 opacity-[0.03] group-hover:opacity-[0.07] transition-all duration-700"
+                    >
                       <Zap size={200} />
-                    </div>
+                    </motion.div>
                     <div className="relative z-10">
                       <div className="flex items-center gap-3 mb-8">
                         <div className="w-8 h-8 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400">
