@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ide-bg: #090d16;
+  --color-ide-sidebar: #0d1322;
+  --color-ide-panel: #111827;
+  --color-ide-border: #1f293d;
+  --color-ide-accent: #a855f7;
+  --color-ide-neon: #84cc16;
+  --color-ide-cyan: #06b6d4;
+  --font-mono: "Fira Code", monospace;
+  --font-sans: "Inter", sans-serif;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #090d16;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d1322;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f293d;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+.glow-accent {
+  box-shadow: 0 0 20px -3px rgba(168, 85, 247, 0.25);
+}
+.glow-lime {
+  box-shadow: 0 0 20px -3px rgba(132, 204, 22, 0.25);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
